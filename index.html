@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simon Game</title>
+</head>
+<body>
+<div class="container">
+    <h1 id="logo">Simon</h1>
+    <div class="functionality">
+        <textarea type="text" id="counter" readonly></textarea>
+        <button id="start" class="option-button">Start</button>
+        <button id="strict" class="option-button">Strict</button>
+        <button id="on-off" class="option-button">On/Off</button>
+    </div>
+    <div class="grid">
+        <button id="red" class="game-buttons top-left" disabled></button>
+        <button id="yellow" class="game-buttons top-right" disabled></button>
+        <button id="green" class="game-buttons bottom-left" disabled></button>
+        <button id="blue" class="game-buttons bottom-right" disabled></button>
+    </div>
+</div>
+    <script src="./script/app.js"></script>
+    <script src="./script/app2.js"></script>
+
+</body>
+</html>
