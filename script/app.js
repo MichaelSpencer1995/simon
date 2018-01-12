@@ -7,10 +7,9 @@ var playerCount;
 var isPlaying = false;
 var isStrict = false;
 var findingNextToShow = false;
-var failedNotStrictMode = false;
 var moveToCopy;
-var singingNote;
-
+var movesToShow
+console.log('dick butts')
 // cancel set time outs
 var c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17;
 
@@ -140,6 +139,7 @@ function findNextToShow() {
     findingNextToShow = true;
 
     var nextMove = moves[counter];
+    // var nextMove = movesToShow[counter];
 
     if(isStrict && showingCorrectMove) {
         nextMove = moves[moveToCopy];
@@ -261,7 +261,7 @@ function handleColor() {
     if(correctMove) {
         if(lastMove) {
                 
-            if(counter === 3) {
+            if(counter === 20) {
                 countDisplay.textContent = 'YOU WON!';
                 userWon();
                 return;
