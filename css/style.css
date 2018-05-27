@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(221, 221, 221);
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #262626;
+    font-family: 'Segoe UI',Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -9,23 +9,22 @@ body {
     align-items: center;
     margin: 0 auto;
     width: 320px;
-    height: 420px;
-    border-radius: 31px;
-    background-color: rgb(255, 168, 28);
 }
 
 .functionality{
     width: 82%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
+    margin-top: 5px;
 }
 
 .functionality button {
     width: 40px;
-    font-size: 10px;
+    font-size: 8px;
+    text-transform: uppercase;
     border:none;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     outline: none;
 
@@ -66,9 +65,12 @@ body {
 }
 
 #logo {
-    color: rgb(104, 101, 101);
-    position: relative;
-    top: 20px;
+    color: #ccc;
+    font-weight: 100;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
 }
 
 .grid {
@@ -76,9 +78,8 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5rem;
     height: 233px;
-    width: 234px;
-    position: relative;
-    top: 16px;
+    width: 82%;
+    margin-top: 10px;
 }
 
 
@@ -89,22 +90,22 @@ body {
 }
 
 .top-left {
-    background-color: red;
+    background-color: #D54733;
     border-top-left-radius: 10px;
 }
 
 .top-right {
-    background-color: yellow;
+    background-color: #ECC417;
     border-top-right-radius: 10px;
 }
 
 .bottom-left {
-    background-color: green;
+    background-color: #3AA84B;
     border-bottom-left-radius: 10px;
 }
 
 .bottom-right {
-    background-color: blue;
+    background-color: #0E5D9E;
     border-bottom-right-radius: 10px;
 }
 

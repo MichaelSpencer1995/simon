@@ -9,7 +9,6 @@ var isStrict = false;
 var findingNextToShow = false;
 var moveToCopy;
 var movesToShow
-console.log('dick butts')
 // cancel set time outs
 var c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17;
 
@@ -62,23 +61,19 @@ function handleOnOff() {
         clearTimeout(c15);
         clearTimeout(c16);
         clearTimeout(c17);
-        
 
         isPlaying = false;
         isStrict = false;
         countDisplay.textContent = '';
         moves = [];
 
-
     }
     turnedOff = !turnedOff;
-
 }
 
 function handleStrict() {
     if(turnedOff || isPlaying) {
         return;
-
     }
 
     if(isStrict) {
@@ -88,9 +83,7 @@ function handleStrict() {
     } else {
         isStrict = true;
         strict.classList.add('strict-active');
-        
     }
-
 }
 
 
@@ -98,13 +91,11 @@ function handleStrict() {
 function handleStart() {
     if(turnedOff || isPlaying) {
         return;
-
     }
 
     isPlaying = true;
     start.classList.add('start-active');
     startGame();
-
 }
 
 //start game
@@ -115,7 +106,6 @@ function startGame() {
         addMove();
     
     }, 1000);
-
 }
 
 
@@ -130,8 +120,6 @@ function addMove(currentMoves) {
         findNextToShow();
 
     }, 1000);
-
-
 }
 
 function findNextToShow() {
@@ -143,7 +131,6 @@ function findNextToShow() {
 
     if(isStrict && showingCorrectMove) {
         nextMove = moves[moveToCopy];
-
     }
 
     if(nextMove === 0) {
@@ -162,11 +149,8 @@ function findNextToShow() {
         countDisplay.textContent = count++;
         playersTurn();
         return;
-
     }
     counter++;
-
-
 }
 
 
@@ -193,9 +177,7 @@ function playNext() {
             findNextToShow();
 
         }, 700);
-
     }, 300);
-
 }
 
 
@@ -205,7 +187,6 @@ function playersTurn() {
     playerCount = 0
     moveToCopy = 0;
     unlockAll();
-
 }
 
 
@@ -230,15 +211,10 @@ function showCorrectMove() {
                         findNextToShow();
 
                     }, 400);
-
                 }, 400);
-
             }, 400);
-
         }, 400);
-
     }, 400);
-
 }
 
 
@@ -246,7 +222,6 @@ function handleColor() {
     if(showingCorrectMove || findingNextToShow) {
         console.log('returned', showingCorrectMove, findingNextToShow)
         return;
-
     }
 
     console.log('color pressed')
@@ -265,7 +240,6 @@ function handleColor() {
                 countDisplay.textContent = 'YOU WON!';
                 userWon();
                 return;
-
             }
 
             findingNextToShow = true;
@@ -274,7 +248,6 @@ function handleColor() {
 
         } else {
             moveToCopy++;
-
         }
 
     } else {
@@ -282,14 +255,11 @@ function handleColor() {
         count--;
         lockAll();
         showCorrectMove();
-
-
     }
 
     setTimeout(function() {
         self.style.backgroundColor = self.button.color1;
 
     }, 300);
-
 }
 

@@ -4,17 +4,15 @@ function SimonButton (index, sound, color1, color2, frequency) {
     this.color1 = color1;
     this.color2 = color2;
     this.frequency = frequency;
-
 }
 
-red.button = new SimonButton(0, './sounds/simonSound1.mp3', 'red', 'darkred', 329.63);
-yellow.button = new SimonButton(1, './sounds/simonSound2.mp3', 'yellow', 'gold', 261.63);
-green.button = new SimonButton(2, './sounds/simonSound3.mp3', 'green', 'darkgreen', 220);
-blue.button = new SimonButton(3, './sounds/simonSound4.mp3', 'blue', 'darkblue', 164.81);
+red.button = new SimonButton(0, './sounds/simonSound1.mp3', 'rgb(230, 49, 49)', '#a92e1d', 329.63);
+yellow.button = new SimonButton(1, './sounds/simonSound2.mp3', '#ECC417', '#caa400', 261.63);
+green.button = new SimonButton(2, './sounds/simonSound3.mp3', '#3AA84B', '#1d882d', 220);
+blue.button = new SimonButton(3, './sounds/simonSound4.mp3', '#0E5D9E', '#0d3a5f', 164.81);
 
 function ranNumBetween(min, max) {
     return Math.floor(Math.random()*(max-min+1)+min);
-
 }
 
 function lockAll() {
@@ -23,7 +21,6 @@ function lockAll() {
     green.setAttribute('disabled', 'true');
     yellow.setAttribute('disabled', 'true');
     blue.setAttribute('disabled', 'true');
-
 }
 
 function unlockAll() {
@@ -32,7 +29,6 @@ function unlockAll() {
     green.removeAttribute("disabled");
     yellow.removeAttribute("disabled");
     blue.removeAttribute("disabled");
-
 }
 
 function reset() {
@@ -43,7 +39,6 @@ function reset() {
     showingCorrectMove = false;
     playerCount = 0;
     findingNextToShow = false;
-    
 }
 
 
@@ -76,33 +71,23 @@ function userWon() {
                                     strict.classList.add('strict-active');
                                     
                                 }, 400);
-        
                             }, 400);
-
                         }, 400);
-
                     }, 400);
-
                 }, 400);
-
             }, 400);
-
         }, 400);
-
     }, 400);
-    
 }
 
 function strobeOne() {
     onOff.classList.remove('onOff-active');
     start.classList.remove('start-active');
     strict.classList.add('strict-active');
-
 }
 
 function strobeTwo() {
     onOff.classList.add('onOff-active');
     start.classList.add('start-active');
     strict.classList.remove('strict-active');
-
 }
